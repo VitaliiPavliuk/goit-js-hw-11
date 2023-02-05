@@ -89,6 +89,8 @@ const onScroll = async event => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
     pixabayApi.page += 1;
 
+    console.log(pixabayApi.page);
+
     try {
       const response = await pixabayApi.fetchPhotosByQuery();
 
