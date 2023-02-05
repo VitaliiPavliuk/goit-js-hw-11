@@ -3,6 +3,7 @@ import axios from 'axios';
 export class PixabayAPI {
   static BASE_URL = 'https://pixabay.com/api/';
   static API_KEY = '33371810-0a52094386dea8583f801697d';
+  static PER_PAGE = 40;
 
   constructor() {
     this.page = null;
@@ -18,7 +19,7 @@ export class PixabayAPI {
         orientation: 'horizontal',
         safesearch: true,
         page: this.page,
-        per_page: 40,
+        per_page: PixabayAPI.PER_PAGE,
       },
     };
 
